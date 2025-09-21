@@ -118,13 +118,6 @@ function playGames () {
     iframe.attr('src', play);
 }
 
-function headers () {
-    return {
-        'Accept': 'application/vnd.github.v3+json',
-            'Access-Control-Allow-Origin': '*'
-    };
-}
-
 async function fetchPath (path = '') {
     const url = `https://api.pixalo.xyz/gh/${path}?ref=${BRANCH}`;
     const res = await fetch(url);

@@ -3,7 +3,7 @@
  * @Repository: https://github.com/pixalo
  * @License: MIT
  */
-@import "https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark-dimmed.min.css";
+@import 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/github-dark-dimmed.min.css';
 
 :root {
     --bg-primary: #031c1b;
