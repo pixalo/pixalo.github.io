@@ -14,7 +14,7 @@
     <div class="navbar">
         <ul class="nav-items">
             <li><a href="/" class="nv-item">Home</a></li>
-            <li><a href="https://github.com/pixalo/pixalo/wiki" class="nv-item">Wiki</a></li>
+            <li><a href="https://github.com/pixalo/pixalo/tree/main/wiki" class="nv-item">Wiki</a></li>
             <li><a href="/examples" class="nv-item">Examples</a></li>
             <li><a href="/games" class="nv-item">Games</a></li>
         </ul>
@@ -40,7 +40,7 @@
 <div id="mb-menu">
     <ul class="mb-menu-items">
         <li><a href="/" class="nv-item">Home</a></li>
-        <li><a href="https://github.com/pixalo/pixalo/wiki" class="nv-item">Wiki</a></li>
+        <li><a href="https://github.com/pixalo/pixalo/tree/main/wiki" class="nv-item">Wiki</a></li>
         <li><a href="/examples" class="nv-item">Examples</a></li>
         <li><a href="/games" class="nv-item">Games</a></li>
     </ul>
@@ -73,7 +73,7 @@
                 <a href="/examples">
                     <button class="glass-morphism button cl-white">Examples</button>
                 </a>
-                <a href="https://github.com/pixalo/pixalo/wiki">
+                <a href="https://github.com/pixalo/pixalo/tree/main/wiki">
                     <button class="glass-morphism button cl-white" style="background: var(--cl-secondary)">Read wiki</button>
                 </a>
             </div>
@@ -198,6 +198,65 @@
         </div>
     </div>
 
+    <section class="container install-methods">
+        <img src="https://pixalo.xyz/assets/img/character.png" alt="" class="character-left">
+        <img src="https://pixalo.xyz/assets/img/play.png" alt="" class="character-right">
+
+        <div class="flex align-center flex-center flex-direction-column">
+            <h2 class="hero-title">Installation Methods</h2>
+            <span class="hero-subtitle mt-10">Choose the flavour that fits your stack</span>
+        </div>
+
+        <div class="grid-2 gap-10 mt-30">
+            <!-- Bundled -->
+            <div class="glass-morphism method-card">
+                <h3>🎯 Bundled</h3>
+                <p class="font-13">Drop-in script tag for instant browser fun.</p>
+                <pre class="mt-15"><code class="language-html">&lt;script src="pixalo.bundle.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+
+            <!-- ES Module -->
+            <div class="glass-morphism method-card">
+                <h3>📦 ES Module</h3>
+                <p class="font-13">Modern bundlers & Vite-friendly.</p>
+                <pre class="mt-15"><code class="language-javascript">import Pixalo from 'pixalo.esm.js';</code></pre>
+            </div>
+
+            <!-- UMD -->
+            <div class="glass-morphism method-card">
+                <h3>🌍 UMD</h3>
+                <p class="font-13">Works with AMD, CommonJS, or script tag.</p>
+                <pre class="mt-15"><code class="language-javascript">import Pixalo from 'pixalo.umd.js';</code></pre>
+                <pre class="mt-15"><code class="language-html">&lt;script src="pixalo.umd.js"&gt;&lt;/script&gt;</code></pre>
+            </div>
+
+            <!-- NPM -->
+            <div class="glass-morphism method-card">
+                <h3>⬇️ NPM</h3>
+                <p class="font-13">Latest stable release.</p>
+                <pre class="mt-20"><code class="language-cmake">npm install pixalo</code></pre>
+            </div>
+        </div>
+
+        <!-- CDN -->
+        <div class="flex align-center flex-center flex-direction-column mt-20 mb-20">
+            <span class="hero-subtitle">JSDelivr CDN</span>
+        </div>
+        <div class="glass-morphism mt-10" style="padding: 22px;border-radius: 8px">
+            <h3>Bundle</h3>
+            <pre class="mt-10"><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/pixalo/pixalo@master/dist/pixalo.bundle.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+        <div class="glass-morphism mt-10" style="padding: 22px;border-radius: 8px">
+            <h3>ESM</h3>
+            <pre class="mt-5"><code class="language-javascript">import Pixalo from 'https://cdn.jsdelivr.net/gh/pixalo/pixalo@master/dist/pixalo.esm.js';</code></pre>
+        </div>
+        <div class="glass-morphism mt-10" style="padding: 22px;border-radius: 8px">
+            <h3>UMD</h3>
+            <pre class="mt-15"><code class="language-javascript">import Pixalo from 'https://cdn.jsdelivr.net/gh/pixalo/pixalo@master/dist/pixalo.umd.js';</code></pre>
+            <pre class="mt-15"><code class="language-html">&lt;script src="https://cdn.jsdelivr.net/gh/pixalo/pixalo@master/dist/pixalo.umd.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+    </section>
+
 </div>
 
 <footer class="footer">
@@ -226,6 +285,7 @@
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.9.0/dist/highlightjs-line-numbers.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/languages/javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/languages/cmake.min.js"></script>
 <script src="./assets/js/main.js"></script>
 </body>
 </html>

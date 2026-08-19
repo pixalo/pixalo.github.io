@@ -55,10 +55,10 @@ shot.revoke();
 `,
     `const results = await game.wait(
     game.delay(1000),
-    game.loadAsset(
+    game.assets.load(
         'image', 'player', 'player.png'
     ),
-    game.loadAsset('audio', 'bgm', 'music.mp3'),
+    game.assets.load('audio', 'bgm', 'music.mp3'),
 );
 `,
     `game.on('resize', () => {
@@ -221,7 +221,8 @@ function destroyPreviewResources () {
 
 // Main Codes
 $(document).ready(function () {
-    renderRandomPreviewCode();
+    if ($('#main-codebox').length)
+        renderRandomPreviewCode();
 
     if ($('#play-game').length)
         playGames();
@@ -230,9 +231,21 @@ $(document).ready(function () {
         $('#mb-menu').toggleClass('opened');
         $(this).toggleClass('opened');
     });
-
     $('#back-to-top').click(function () {
         $('html, body').animate({ scrollTop: 0 }, 1000);
+    });
+
+    $('.tab-btn').on('click', function () {
+        const target = $(this).data('tab');
+        $(this).siblings('.tab-btn').removeClass('active');
+        $(this).closest('.tab-buttons').next('.tab-container').find('.tab-content').removeClass('active');
+        $(this).addClass('active');
+        $(`#tab-${target}`).addClass('active');
+    });
+
+    $('.install-methods code, .install-section code').each(function () {
+        hljs.highlightElement(this);
+        hljs.lineNumbersBlock(this);
     });
 });
 
