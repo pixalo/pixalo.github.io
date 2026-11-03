@@ -119,7 +119,7 @@ function playGames () {
 }
 
 async function fetchPath (path = '') {
-    const url = `https://api.pixalojs.workers.dev/${path}?ref=${BRANCH}`;
+    const url = `https://api.pixalojs.workers.dev/gh/${path}?ref=${BRANCH}`;
     const res = await fetch(url);
     if (!res.ok) throw new Error(res.status);
     return res.json();
